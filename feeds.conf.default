@@ -1,0 +1,35 @@
+#src-bzr通过使用bzr从数据源的pxiaath/URL下载数据
+#src-cpy通过从数据源path拷贝数据
+#src-darcs通过使用darcs从数据源path/URL下载数据
+#src-hg通过使用hg从数据源path/URL下载数据
+#src-link创建一个数据源path的symlink
+#src-svn通过使用svn从数据源path/URL下载数据
+
+
+#lean 仓库里自带的源
+src-git packages https://github.com/coolsnowwolf/packages
+src-git luci https://github.com/coolsnowwolf/luci
+src-git routing https://git.openwrt.org/feed/routing.git
+src-git telephony https://git.openwrt.org/feed/telephony.git
+
+#这是原有的，仅作打开处理
+#fw876源
+#包含 ssr+ 
+src-git helloworld https://github.com/fw876/helloworld.git
+
+#添加
+#xiaorouji 源
+#包含 passwall
+src-git xiaorouji https://github.com/xiaorouji/openwrt-passwall.git
+#xiaorouji passwall 的依赖
+src-git xrjdependence https://github.com/xiaorouji/openwrt-passwall-packages.git
+
+
+#src-git video https://github.com/openwrt/video.git
+#src-git targets https://github.com/openwrt/targets.git
+#src-git management https://github.com/openwrt-management/packages.git
+#src-git oldpackages http://git.openwrt.org/packages.git
+#src-link custom /usr/src/openwrt/custom-feed
+
+
+
