@@ -17,4 +17,5 @@
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 
 #解决使用系统环境精简工具后，缺失编译工具的问题
+#在 Load custom feeds 环节引入
 sudo apt install clang
