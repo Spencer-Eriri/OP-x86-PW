@@ -12,11 +12,13 @@ src-git luci https://github.com/coolsnowwolf/luci
 src-git routing https://git.openwrt.org/feed/routing.git
 src-git telephony https://git.openwrt.org/feed/telephony.git
 
-#这是原有的，仅作打开处理。但因其 ChinaDNS-NG 组件未及时更新，编译进固件会影响 passwall 使用，遂在编译过程中整体去掉。
+#这是原有的，默认即为关闭。
+#因其 ChinaDNS-NG 组件未及时更新，编译进固件会影响 passwall 使用，遂在编译过程中整体去掉。
+#他的依赖和 passwall 重叠，添加源也会影响 passwall 依赖的编译，遂保持关闭状态。
 #如打开 ssr+ 的 Tuic-Clinet 编译项，ChinaDNS-NG 会变成依赖无法取消，这点要注意。
 #fw876源
 #包含 ssr+ 
-src-git helloworld https://github.com/fw876/helloworld.git
+#src-git helloworld https://github.com/fw876/helloworld.git
 
 #添加
 #xiaorouji 源
