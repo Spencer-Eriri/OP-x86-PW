@@ -18,8 +18,9 @@ env:
 
 on:
   workflow_dispatch:
-#  schedule:
-#    - cron: 0 */18 * * *
+  # UTC 时间晚 8 点，GMT+08(中国）时间凌晨4点。Github Action 就是 UTC 时间，这改不了
+  schedule:
+    - cron: 0 0 20 * * ? 
 
 jobs:
   check:
