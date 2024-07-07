@@ -10,7 +10,7 @@
 # See /LICENSE for more information.
 #
 
-name: OpenWrt Passwall Builder
+name: OpenWrt Passwall Builder Test
 
 on:
   repository_dispatch:
