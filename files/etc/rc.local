@@ -1,6 +1,7 @@
 # Put your custom commands here that should be executed once
 # the system init finished. By default this file does nothing.
 
+#不要在生产环境移除这行代码！！！否则会变成不加入这行代码不能保存，因为不能保存又不能加入代码的死循环
 #每次开机重新挂载目录为rw
 #解决重启后磁盘变为只读导致不能保存配置的问题
 mount -o remount rw /
