@@ -65,13 +65,14 @@ jobs:
         sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
-
-    - name: Clone source code
-      working-directory: /workdir
+  
+    - name: Clone source code to /mnt
       run: |
-        df -hT $PWD
+        sudo mkdir -p /mnt/openwrt
+        sudo chown $USER:$GROUPS /mnt/openwrt
+        cd /mnt
         git clone $REPO_URL -b $REPO_BRANCH openwrt
-        ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
+        ln -sf /mnt/openwrt $GITHUB_WORKSPACE/openwrt
 
     - name: Load custom feeds
       run: |
