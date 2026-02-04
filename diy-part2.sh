@@ -18,8 +18,8 @@ rm -rf feeds/luci/themes/luci-theme-argon
 rm -rf feeds/luci/applications/luci-app-argon-config
 
 #将上述删除的程序替换为 jerrykuku 版（18.06 分支）
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/downloads/luci-theme-argon
-git clone -b 18.06 https://github.com/jerrykuku/luci-app-argon-config.git package/downloads/luci-app-argon-config
+git clone https://github.com/jerrykuku/luci-theme-argon.git package/downloads/luci-theme-argon
+git clone https://github.com/jerrykuku/luci-app-argon-config.git package/downloads/luci-app-argon-config
 
 #应用默认主题为 Argon-18.06
 #方式是取消 Bootstrap 在 Openwrt 中的依赖地位，取而代之的是 Argon-18.06
