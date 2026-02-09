@@ -1,0 +1,26 @@
+
+config interface 'loopback'
+	option proto 'static'
+	option ipaddr '127.0.0.1'
+	option netmask '255.0.0.0'
+	option device 'lo'
+
+config interface 'lan'
+	option _orig_ifname 'eth1'
+	option _orig_bridge 'true'
+	option proto 'dhcp'
+	option device 'br-lan'
+
+config interface 'lan2'
+	option proto 'static'
+	option auto '0'
+	option netmask '255.255.255.0'
+	option ipaddr '192.168.2.1'
+	option gateway '192.168.1.1'
+	option device 'eth1'
+
+config device
+	option name 'br-lan'
+	option type 'bridge'
+	list ports 'eth0'
+
