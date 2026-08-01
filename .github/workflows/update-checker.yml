@@ -16,7 +16,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
 
-  REPO_URL_PassWall: https://github.com/xiaorouji/openwrt-passwall
+  REPO_URL_PassWall: https://github.com/Openwrt-Passwall/openwrt-passwall
   REPO_BRANCH_PassWall: main
   REPO_PATH_PassWall : "luci-app-passwall"
   
