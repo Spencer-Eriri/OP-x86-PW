@@ -17,5 +17,3 @@ src-git telephony https://github.com/coolsnowwolf/telephony.git
 src-git passwall_luci https://github.com/Openwrt-Passwall/openwrt-passwall.git;main
 #openwrt-passwall 的依赖
 src-git passwall_packages https://github.com/Openwrt-Passwall/openwrt-passwall-packages.git;main
-#homeproxy 源
-git clone --depth=1 https://github.com/immortalwrt/homeproxy.git package/homeproxy
