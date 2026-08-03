@@ -13,8 +13,8 @@
 name: OpenWrt Passwall Builder
 
 on:
-  repository_dispatch:
-  workflow_dispatch:
+  #repository_dispatch:
+  #workflow_dispatch:
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
