@@ -28,7 +28,7 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Ma
 
 # GeoIP 数据库，为 Nikki 初次启动预置
 mkdir -p files/etc/nikki/run
-curl -L -o files/etc/nikki/run/geoip.metadb "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country.mmdb"
+curl -L -o files/etc/nikki/run/geoip.metadb "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country.mmdb"
 
 # zashboard 面板，为 Nikki 预置
 UI_DIR="files/etc/nikki/run/ui"
