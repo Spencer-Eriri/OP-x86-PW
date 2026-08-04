@@ -25,3 +25,14 @@ git clone https://github.com/jerrykuku/luci-app-argon-config.git package/downloa
 #方式是取消 Bootstrap 在 Openwrt 中的依赖地位，取而代之的是 Argon（主线分支）
 #但 Bootstrap 和 Argon 均会编译，在 config 中去除 Bootstrap 是无效的
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Makefile
+
+# GeoIP 数据库，为 Nikki 初次启动预置
+mkdir -p files/etc/nikki/run
+curl -L -o files/etc/nikki/run/geoip.metadb "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country.mmdb"
+
+# zashboard 面板，为 Nikki 预置
+UI_DIR="files/etc/nikki/run/ui"
+mkdir -p "$UI_DIR"
+curl -L -o /tmp/zashboard-dist.zip "https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip"
+unzip -oq /tmp/zashboard-dist.zip -d "$UI_DIR"
+rm -f /tmp/zashboard-dist.zip
