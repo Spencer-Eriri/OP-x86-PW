@@ -32,7 +32,16 @@ curl -L -o files/etc/nikki/run/geoip.metadb "https://raw.githubusercontent.com/L
 
 # zashboard 面板，为 Nikki 预置
 UI_DIR="files/etc/nikki/run/ui"
+TMP_DIR="/tmp/zashboard-extract"
+
 mkdir -p "$UI_DIR"
+rm -rf "$TMP_DIR"
+mkdir -p "$TMP_DIR"
+
 curl -L -o /tmp/zashboard-dist.zip "https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip"
-unzip -oq /tmp/zashboard-dist.zip -d "$UI_DIR"
-rm -f /tmp/zashboard-dist.zip
+unzip -oq /tmp/zashboard-dist.zip -d "$TMP_DIR"
+
+# 把 dist/ 里的内容挪到 ui/ 下(注意这里用 dist/* 而不是 dist)
+mv "$TMP_DIR"/dist/* "$UI_DIR"/
+
+rm -rf /tmp/zashboard-dist.zip "$TMP_DIR"
