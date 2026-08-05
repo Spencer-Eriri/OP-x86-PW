@@ -26,9 +26,14 @@ git clone https://github.com/jerrykuku/luci-app-argon-config.git package/downloa
 #但 Bootstrap 和 Argon 均会编译，在 config 中去除 Bootstrap 是无效的
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Makefile
 
-# GeoIP 数据库，为 Nikki 初次启动预置
+  mmdb: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.metadb"
+  geoip: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat"
+  geosite: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
+  asn: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
+
+# GeoIP 数据库，为 Nikki 初次启动预置，别换其他规则，这是 mihomo 作者的规则
 mkdir -p files/etc/nikki/run
-curl -L -o files/etc/nikki/run/geoip.metadb "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country.mmdb"
+curl -L -o files/etc/nikki/run/geoip.metadb "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.metadb"
 
 # zashboard 面板，为 Nikki 预置
 UI_DIR="files/etc/nikki/run/ui"
