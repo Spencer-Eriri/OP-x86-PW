@@ -34,6 +34,9 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Ma
 # GeoIP 数据库，为 Nikki 初次启动预置，别换其他规则，这是 mihomo 作者的规则
 mkdir -p files/etc/nikki/run
 curl -L -o files/etc/nikki/run/geoip.metadb "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.metadb"
+curl -L -o files/etc/nikki/run/geoip.dat "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat"
+curl -L -o files/etc/nikki/run/geosite.dat "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
+curl -L -o files/etc/nikki/run/asn.mmdb "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
 
 # zashboard 面板，为 Nikki 预置
 UI_DIR="files/etc/nikki/run/ui"
